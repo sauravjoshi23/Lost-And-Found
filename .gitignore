@@ -150,5 +150,7 @@ __pycache__/
 *.jpg
 .jpeg
 *.jpeg
+.env
+*.env
 
 debug.txt
