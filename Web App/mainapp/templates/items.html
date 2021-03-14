@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+    <div>
+        <div>
+            <button type="submit" class="button_decoration button3" onclick="location.href='{% url 'add_item' %}'">Add a New Found Item in this Category</button>
+            {% for i in items_data|slice:":1" %}
+                <div>
+                    <button type="submit" class="button_decoration button3" onclick="location.href='{% url 'filtered_items' value=i.category_name %}'">Enter Your Lost Item Description to Find Your Item</button>
+                </div>
+            {% endfor %}
+        </div>
+        <div>
+            {% for i in items_data %}
+                <button type="submit" class="button button3">Item Name: {{i.item_name}}. </button>
+            {% endfor %}
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script type="text/javascript" src="{% static 'js/index.js' %}"></script>
+    <link href="{% static 'css/main.css' %}" rel="stylesheet">
+
+
+{% endblock %}

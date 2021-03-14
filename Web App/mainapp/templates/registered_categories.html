@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+    <div>
+        <div>
+            {% for i in category_data %}
+                <button type="submit" class="button button3" onclick="location.href='{% url 'items' value=i.category_name %}'">{{i.category_name}}</button>
+            {% endfor %}
+        </div>
+    </div>
+
+
+<link href="{% static 'css/main.css' %}" rel="stylesheet">
+
+{% endblock %}

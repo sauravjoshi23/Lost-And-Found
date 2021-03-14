@@ -152,5 +152,7 @@ __pycache__/
 *.jpeg
 .env
 *.env
+.sqlite3
+*.sqlite3
 
 debug.txt

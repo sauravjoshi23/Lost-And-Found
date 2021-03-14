@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+    <div>
+        <button type="submit" class="button button3" onclick="location.href='{% url 'registered_categories' %}'">Registered Categories</button>
+        <button type="submit" class="button button3" onclick="location.href='{% url 'new_category' %}'">New Category</button>
+    </div>
+
+
+<link href="{% static 'css/main.css' %}" rel="stylesheet">
+
+{% endblock %}

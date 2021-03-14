@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+    <div>
+        <h2 style="padding:20px">Form</h2>
+        <div>
+          <form id="form" action="" method="POST">
+              {% csrf_token %}
+            <div class="form-group">
+              <label for="description">Comment:</label>
+              <textarea class="form-control" rows="7" id="description" name="description" placeholder="Enter Data"></textarea>
+            </div>
+            <button type="submit" class="button button3">Filter</button>
+          </form>
+        </div>
+
+        <table class="table table-striped">
+            <tr  class="bg-info">
+                <th>Category</th>
+                <th>Item Name</th>
+                <th>Item Description</th>
+                <th>Founder Name</th>
+                <th>Founder Number</th>
+            </tr>
+
+            <tbody id="output1">
+
+            </tbody>
+        </table>
+<!--        <div>-->
+<!--            {% for i in items_data %}-->
+<!--                <button type="submit" class="button button3">Item Name: {{i.msg}}. </button>-->
+<!--            {% endfor %}-->
+<!--        </div>-->
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script type="text/javascript" src="{% static 'js/index.js' %}"></script>
+    <link href="{% static 'css/main.css' %}" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+{% endblock %}
